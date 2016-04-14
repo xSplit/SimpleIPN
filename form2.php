@@ -1,6 +1,6 @@
 Redirecting...
 <form action="https://www.coinpayments.net/index.php" method="post" id="checkout_form">
-	<input type="hidden" name="cmd" value="_pay_simple">
+	<input type="hidden" name="cmd" value="_pay">
 	<input type="hidden" name="reset" value="1">
 	<input type="hidden" name="merchant" value="id">
 	<input type="hidden" name="item_name" value="Item name">
