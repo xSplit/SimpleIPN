@@ -1,2 +1,2 @@
 # SimpleIPN
-A simple paypal IPN class
+Paypal and Coinpayments simple IPN classes
