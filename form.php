@@ -11,6 +11,6 @@ Redirecting...
     <input type="hidden" name="return" value="http://website.com/success.php">
     <input type="hidden" name="cancel_return" value="http://website.com">
     <input type="hidden" name="notify_url" value="http://website.com/ipn.php">
-    <input type="hidden" name="custom" value="<?php echo $userid;?>"> <!-- {$mybb->user['uid']} -->
+    <input type="hidden" name="custom" value="<?php echo $userid;?>">
 </form>
 <script>document.getElementById('checkout_form').submit();</script>
