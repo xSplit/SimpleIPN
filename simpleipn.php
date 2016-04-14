@@ -40,6 +40,10 @@ class SimpleIPN{
     public function getCustom(){
         return $_POST['custom'];
     }
+    
+    public function getItem($key){
+        return $_POST['item_'.$key];
+    }
 
     public static function isIPN(){
         if($_SERVER['REQUEST_METHOD'] == 'POST')
