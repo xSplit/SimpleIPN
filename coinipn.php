@@ -24,6 +24,10 @@ class CoinIPN{
     public function getCustom(){
         return $_POST['custom'];
     }
+    
+    public function getItem($key){
+        return $_POST['item_'.$key];
+    }
 
     public static function isIPN(){
         return !(!isset($_POST['ipn_mode']) || $_POST['ipn_mode'] != 'hmac'
