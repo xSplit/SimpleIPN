@@ -26,7 +26,7 @@ class SimpleIPN{
     }
 
     public function isCompleted($paypal, $amount, $currency='USD'){
-        return $this->IsVerified() && $_POST['receiver_email'] == $paypal
+        return $_POST['receiver_email'] == $paypal
         && $_POST['payment_status'] == 'Completed' && $_POST['amount'] == $amount
         && $_POST['mc_currency'] == $currency;
     }
