@@ -11,6 +11,5 @@ Redirecting...
 	<input type="hidden" name="cancel_url" value="http://website.com">
 	<input type="hidden" name="ipn_url" value="http://website.com/ipn.php">
 	<input type="hidden" name="custom" value="<?php echo $userid;?>">
-	<input type='submit' value='Buy with BTC' class='button new_reply_button'>
 </form>
-	<script>document.getElementById('checkout_form').submit();</script>
+<script>document.getElementById('checkout_form').submit();</script>
