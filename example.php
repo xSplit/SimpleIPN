@@ -8,6 +8,6 @@ if(SimpleIPN::isIPN()){
     if($ipn->isVerified() && $ipn->isCompleted($paypal,$amount)){
         $id = $ipn->getID();
         //STORE TRANSACTION
-        //DO STUFF
+        //DO STUFF $_POST['custom']
     }
 }
