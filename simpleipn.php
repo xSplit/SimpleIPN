@@ -3,8 +3,8 @@
 class SimpleIPN{
 
     private $req;
-    public function __construct($head = 'HTTP/1.1 200 OK'){
-        header($head);
+    public function __construct(){
+        header('HTTP/1.1 200 OK');
         $this->req = 'cmd=_notify-validate';
         foreach ($_POST as $key => $value) {
             $value = urlencode(stripslashes($value));
