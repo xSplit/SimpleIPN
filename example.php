@@ -8,7 +8,7 @@ if(SimpleIPN::isIPN()){
     if($ipn->isVerified() && $ipn->receivedAt($paypal) && $ipn->isCompleted($amount)){
         $id = $ipn->getID();
         //STORE TRANSACTION
-        //DO STUFF $ipn->getCustom()
+        //DO STUFF $ipn->getCustom() / $ipn->getItem('name') or id
     }
 }
 
@@ -22,6 +22,6 @@ if(CoinIPN::isIPN()){
     if($ipn->isVerified($merchant_id,$ipn_secret) && $ipn->isCompleted($amount)){
         $id = $ipn->getID();
         //STORE TRANSACTION
-        //DO STUFF $ipn->getCustom()
+        //DO STUFF $ipn->getCustom() / $ipn->getItem('name') or id
     }
 }
