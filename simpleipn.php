@@ -25,10 +25,12 @@ class SimpleIPN{
         return false;
     }
 
-    public function isCompleted($paypal, $amount, $currency='USD'){
-        return $_POST['receiver_email'] == $paypal
-        && $_POST['payment_status'] == 'Completed' && $_POST['amount'] == $amount
-        && $_POST['mc_currency'] == $currency;
+    public function isCompleted($amount, $currency='USD'){
+        return $_POST['payment_status'] == 'Completed' && $_POST['amount'] == $amount && $_POST['mc_currency'] == $currency;
+    }
+    
+    public function receivedAt($paypal){
+        return $_POST['receiver_email'] == $paypal;
     }
 
     public function getID(){
