@@ -36,6 +36,10 @@ class SimpleIPN{
     public function getID(){
         return $_POST['txn_id'];
     }
+    
+    public function getCustom(){
+        return $_POST['custom'];
+    }
 
     public static function isIPN(){
         if($_SERVER['REQUEST_METHOD'] == 'POST')
