@@ -16,6 +16,14 @@ class CoinIPN{
         return $amount >= floatval($_POST['amount1']) && $_POST['currency1'] == $currency
             && ($_POST['status'] >= 100 || $_POST['status'] == 2);
     }
+    
+    public function getID(){
+        return $_POST['txn_id'];
+    }
+    
+    public function getCustom(){
+        return $_POST['custom'];
+    }
 
     public static function isIPN(){
         return !(!isset($_POST['ipn_mode']) || $_POST['ipn_mode'] != 'hmac'
