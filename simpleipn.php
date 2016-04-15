@@ -1,5 +1,4 @@
 <?php
-
 class SimpleIPN{
 
     private $req;
@@ -36,18 +35,16 @@ class SimpleIPN{
     public function getID(){
         return $_POST['txn_id'];
     }
-    
-    public function getCustom(){
+	
+	public function getCustom(){
         return $_POST['custom'];
     }
-    
-    public function getItem($key){
+	
+	public function getItem($key){
         return $_POST['item_'.$key];
     }
 
     public static function isIPN(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST')
-            return isset($_POST['payment_status'],$_POST['txn_id']);
-        return false;
+        return $_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['payment_status'],$_POST['txn_id']);
     }
 }
