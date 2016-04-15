@@ -36,11 +36,11 @@ class SimpleIPN{
         return $_POST['txn_id'];
     }
 	
-	public function getCustom(){
+    public function getCustom(){
         return $_POST['custom'];
     }
 	
-	public function getItem($key){
+    public function getItem($key){
         return $_POST['item_'.$key];
     }
 
